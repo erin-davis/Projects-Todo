@@ -14,6 +14,8 @@ export default function TodoForm(props){
 
   const submitForm = e =>{
     e.preventDefault();
+    props.addNewTodo(note);
+    setNote({title: "", noteBody: ""});
   }
 
   //note: there should be a confirmation alert with the reset form since it'll reset the full form
@@ -37,11 +39,10 @@ export default function TodoForm(props){
         <textarea
           name="notes"
           id="notes"
-          form="notes-form"
+          placeholder="Further details here..."
           onChange={handleChanges}
-          >
-          Further detail here...
-          </textarea>
+          value={note.noteBody}
+          />
          <input
           type="checkbox"
           id="check-save"
@@ -53,5 +54,5 @@ export default function TodoForm(props){
          <button type="reset">Reset Page</button>
       </form>
     </div>
-  )
-}
+  );
+};

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import TodoForm from "./components/TodoForm.js";
+import Todo from "./components/Todo.js"
 
 function App() {
 
@@ -13,11 +14,21 @@ function App() {
     }
   ]);
 
+  const addNewTodo = todo =>{
+    const newTodo = {
+      id: Date.now(),
+      title: todo.title,
+      noteBody: todo.noteBody
+    };
+    setNotes([...notes, newTodo]);
+    console.log(newTodo);
+  }
 
   return (
     <div className="App">
       <h1>This is a Todo List!</h1>
-      <TodoForm />
+      <TodoForm addNewTodo={addNewTodo} />
+      <Todo notes={notes}/>
     </div>
   );
 }
