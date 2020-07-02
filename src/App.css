@@ -31,7 +31,7 @@
   justify-content: space-around;
 }
 
-.notes-form{
+.todo-form form{
   width: 75%;
   display: flex;
   flex-direction: column;

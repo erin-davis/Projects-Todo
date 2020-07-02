@@ -14,14 +14,14 @@ function App() {
     }
   ]);
 
-  const addNewTodo = todo =>{
+  const addNewTodo = note =>{
     const newTodo = {
       id: Date.now(),
-      title: todo.title,
-      noteBody: todo.noteBody
+      title: note.title,
+      noteBody: note.body
     };
     setNotes([...notes, newTodo]);
-    console.log(newTodo);
+    console.log("from in app.js addNewTodo", newTodo);
   }
 
   return (
