@@ -18,7 +18,7 @@ const  TodoForm = (props) =>{
     setNote({ title: "", body: "" });
   };
 
-  //note: there should be a confirmation alert with the reset form since it'll reset the full form
+  //note: there should be a confirmation alert with the reset form since it'll reset both the form and the entire page
   const resetForm = e =>{
     e.preventDefault();
     setNote({title: "", body: ""})
@@ -35,24 +35,28 @@ const  TodoForm = (props) =>{
          onChange={handleChanges}
          name="title"
          value={note.title}
+         maxlength="30"
        />
-       <label htmlFor="body">Body</label>
-       <textarea
-         id="body"
-         name="body"
-         onChange={handleChanges}
-         value={note.body}
-         placeholder="Further details here..."
-       />
-        {/*  <label htmlFor="check-save">Save?</label>
+         <label htmlFor="body">Body</label>
+         <textarea
+           id="body"
+           name="body"
+           onChange={handleChanges}
+           value={note.body}
+           placeholder="Further details here..."
+           maxlength="180"
+         />
+         {/*<label htmlFor="check-save">Save?</label>
          <input
           type="checkbox"
           id="check-save"
           name="check-save"
           value="Save"
          />*/}
-         <button type="submit">Add Todo</button>
-         <button type="reset" onClick={resetForm}>Reset Page</button>
+         <div className="form-controls">
+           <button type="submit">Add Todo</button>
+           <button type="reset" onClick={resetForm}>Reset Page</button>
+         </div>
       </form>
     </div>
   );

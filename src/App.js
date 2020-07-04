@@ -11,6 +11,24 @@ function App() {
       title: "This is a tester note",
       noteBody:
         "And here is a larger portion of the note. I really only want to use this note to make sure that every portion of this will work well!!"
+    },
+    {
+      id: 2,
+      title: "This is a tester note",
+      noteBody:
+        "And here is a larger portion of the note. I really only want to use this note to make sure that every portion of this will work well!!"
+    },
+    {
+      id: 3,
+      title: "This is a tester note",
+      noteBody:
+        "And here is a larger portion of the note. I really only want to use this note to make sure that every portion of this will work well!!"
+    },
+    {
+      id: 4,
+      title: "This is a tester note",
+      noteBody:
+        "And here is a larger portion of the note. I really only want to use this note to make sure that every portion of this will work well!!"
     }
   ]);
 
@@ -27,8 +45,10 @@ function App() {
   return (
     <div className="App">
       <h1>This is a Todo List!</h1>
-      <TodoForm addNewTodo={addNewTodo} />
-      <Todo notes={notes}/>
+      <div className="">
+        <TodoForm addNewTodo={addNewTodo} />
+        <Todo notes={notes}/>
+      </div>
     </div>
   );
 }

@@ -28,12 +28,63 @@
 
 .todo-form{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .todo-form form{
-  width: 75%;
+  margin-left: 5%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.form-controls{
+
+}
+
+button{
+  border: 1px solid #13272b;
+  width: 100px;
+  height: 35px;
+  border-radius: 6px;
+  background: white;
+}
+
+button:hover{
+  background: #9fc7cf;
+}
+
+.todo-item{
+  border: 1px solid red;
+  width: 90%;
+  margin-left: 4.9%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.list-controls{
+  width: 100%;
+  border: 1px solid yellow;
+  padding: 10px;
+}
+
+.todo-item .note{
+  border: 1px solid #13272b;
+  border-radius: 6px;
+  background: #ede6f7;
+  width: 30%;
+  padding: 5px;
+  margin: 8px 0;
+}
+
+.note:hover{
+  background: #db84a5;
+}
+
+.completed{
+  background-color: black;
+  color: white;
+  border: 2px solid white;
 }
